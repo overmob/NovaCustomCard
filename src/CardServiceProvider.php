@@ -1,6 +1,6 @@
 <?php
 
-namespace Overmob\CustomTable;
+namespace Overmob\NovaCustomTable;
 
 use Laravel\Nova\Nova;
 use Laravel\Nova\Events\ServingNova;
@@ -21,8 +21,8 @@ class CardServiceProvider extends ServiceProvider
         });
 
         Nova::serving(function (ServingNova $event) {
-            Nova::script('custom-table', __DIR__.'/../dist/js/card.js');
-            Nova::style('custom-table', __DIR__.'/../dist/css/card.css');
+            Nova::script('nova-custom-table', __DIR__.'/../dist/js/card.js');
+            Nova::style('nova-custom-table', __DIR__.'/../dist/css/card.css');
         });
     }
 
@@ -38,7 +38,7 @@ class CardServiceProvider extends ServiceProvider
         }
 
         Route::middleware(['nova'])
-                ->prefix('nova-vendor/custom-table')
+                ->prefix('nova-vendor/nova-custom-table')
                 ->group(__DIR__.'/../routes/api.php');
     }
 

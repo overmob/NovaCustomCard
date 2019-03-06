@@ -1,3 +1,3 @@
 Nova.booting((Vue, router) => {
-    Vue.component('custom-table', require('./components/Card'));
+    Vue.component('nova-custom-table', require('./components/Card'));
 })

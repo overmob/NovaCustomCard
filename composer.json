@@ -1,5 +1,5 @@
 {
-    "name": "overmob/custom-table",
+    "name": "overmob/nova-custom-table",
     "description": "A Laravel Nova card.",
     "keywords": [
         "laravel",
@@ -11,13 +11,13 @@
     },
     "autoload": {
         "psr-4": {
-            "Overmob\\CustomTable\\": "src/"
+            "Overmob\\NovaCustomTable\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Overmob\\CustomTable\\CardServiceProvider"
+                "Overmob\\NovaCustomTable\\CardServiceProvider"
             ]
         }
     },

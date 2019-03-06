@@ -1,12 +1,12 @@
 <?php
 
-namespace Overmob\CustomTable;
+namespace Overmob\NovaCustomTable;
 
 use Laravel\Nova\Fields\Number;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Card;
 
-class CustomTable extends Card
+class NovaCustomTable extends Card
 {
     /**
      * The width of the card (1/3, 1/2, or full).
@@ -22,7 +22,7 @@ class CustomTable extends Card
      */
     public function component()
     {
-        return 'custom-table';
+        return 'nova-custom-table';
     }
 
     public function actions($actions){

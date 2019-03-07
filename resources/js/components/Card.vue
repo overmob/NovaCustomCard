@@ -81,7 +81,7 @@
 
                                     <dropdown-menu slot="menu" width="350" direction="rtl" :dark="true">
 
-                                        <div v-if="filtersAreApplied" class="bg-30 border-b border-60">
+                                        <div v-if="filtersAreApplied" class="bg-30 border-b border-60 filter-top">
                                             <button
                                                     @click="resetFilters()"
                                                     class="py-2 w-full block text-xs uppercase tracking-wide text-center text-80 dim font-bold focus:outline-none"
@@ -99,7 +99,7 @@
                                                 :ref="tableId + filter.filterId"
                                                 v-on:filter-change="filterChange"
                                         />
-                                        <div v-if="filterChanged" class="bg-30 border-b border-60">
+                                        <div v-if="filterChanged" class="bg-30 border-b border-60 filter-bottom">
                                             <button
                                                     @click="applyFilters()"
                                                     class="py-2 w-full block text-xs uppercase tracking-wide text-center text-80 dim font-bold focus:outline-none apply-filter"

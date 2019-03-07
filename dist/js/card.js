@@ -4810,7 +4810,7 @@ var render = function() {
                                           "div",
                                           {
                                             staticClass:
-                                              "bg-30 border-b border-60"
+                                              "bg-30 border-b border-60 filter-top"
                                           },
                                           [
                                             _c(
@@ -4859,7 +4859,7 @@ var render = function() {
                                           "div",
                                           {
                                             staticClass:
-                                              "bg-30 border-b border-60"
+                                              "bg-30 border-b border-60 filter-bottom"
                                           },
                                           [
                                             _c(

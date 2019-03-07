@@ -16,6 +16,18 @@
   color: var(--white);
 }
 
+.filter-bottom {
+  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+  overflow: hidden;
+}
+
+.filter-top {
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
+  overflow: hidden;
+}
+
 a:hover {
   cursor: pointer;
 }

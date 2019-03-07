@@ -99,6 +99,14 @@
                                                 :ref="tableId + filter.filterId"
                                                 v-on:filter-change="filterChange"
                                         />
+                                        <div v-if="filterChanged" class="bg-30 border-b border-60">
+                                            <button
+                                                    @click="applyFilters()"
+                                                    class="py-2 w-full block text-xs uppercase tracking-wide text-center text-80 dim font-bold focus:outline-none apply-filter"
+                                            >
+                                                {{ __('Apply Filters') }}
+                                            </button>
+                                        </div>
                                     </dropdown-menu>
                                 </dropdown>
 
@@ -210,7 +218,8 @@
             tableHeight: 0,
             calculatedTableHeight: 0,
             tableCustomClass: '',
-            fetchStarted: false
+            fetchStarted: false,
+            filterChanged: null
         }),
 
         mounted() {
@@ -386,10 +395,7 @@
                 this.$router.push({query: nq});
             },
             filterChange(updatedFilter) {
-                this.updateQueryParam(updatedFilter);
-                setTimeout(() => {
-                    this.fetch();
-                });
+                this.filterChanged = updatedFilter;
             },
             resetFilters() {
                 for (let filter of this.filters) {
@@ -398,6 +404,13 @@
                 let nq = _.clone(this.$route.query);
                 delete nq[this.tableId];
                 this.$router.push({query: nq});
+                setTimeout(() => {
+                    this.fetch();
+                });
+            },
+            applyFilters() {
+                this.updateQueryParam(this.filterChanged);
+                this.filterChanged = null;
                 setTimeout(() => {
                     this.fetch();
                 });

@@ -12,6 +12,11 @@
     overflow: unset;
 }
 
+.apply-filter{
+    background-color: var(--primary);
+    color: var(--white);
+}
+
 a:hover {
     cursor: pointer;
 }
